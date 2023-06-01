@@ -52,7 +52,6 @@ spring:
 #      hibernate.search.backend.analysis.configurer: ca.uhn.fhir.jpa.search.HapiHSearchAnalysisConfigurers$HapiElasticAnalysisConfigurer
 hapi:
   fhir:
-
     ### This enables the swagger-ui at /fhir/swagger-ui/index.html as well as the /fhir/api-docs (see https://hapifhir.io/hapi-fhir/docs/server_plain/openapi.html)
     openapi_enabled: true
     ### This is the FHIR version. Choose between, DSTU2, DSTU3, R4 or R5
@@ -133,7 +132,6 @@ hapi:
       # These are allowed_origin patterns, see: https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/cors/CorsConfiguration.html#setAllowedOriginPatterns-java.util.List-
       allowed_origin:
         - '*'
-
     # Search coordinator thread pool sizes
     search-coord-core-pool-size: 20
     search-coord-max-pool-size: 100
@@ -170,6 +168,7 @@ hapi:
         server_address: 'http://localhost:8080/fhir'
         refuse_to_fetch_third_party_urls: false
         fhir_version: R4
+      ### TODO: Global? brauchen wir es eigentlich?
       global:
         name: Global Tester
         server_address: "http://hapi.fhir.org/baseR4"
