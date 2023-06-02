@@ -37,8 +37,9 @@ public class TestApplication {
 		 */
 		// Creating New Patient
 		Patient newPatient = new Patient();
-		newPatient.addIdentifier().setSystem("urn:system").setValue("99");
-		newPatient.addName().setFamily("Smith").addGiven("John");
+		newPatient.addIdentifier().setSystem("urn:system").setValue("9239");
+		newPatient.addName().setFamily("TestPerson").addGiven("Test");
+		// newPatient.addExtension()
 
 		// Invoke the server create method (and send pretty-printed JSON encoding to the
 		// server instead of the default which is non-pretty printed XML)
