@@ -1,20 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head th:include="tmpl-head :: head">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About This Server</title>
+    <link rel="stylesheet" href="path/to/your/styles.css">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            color: #333333;
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .panel {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .panel-title {
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .panel-body {
+            font-size: 16px;
+        }
+
+        a {
+            color: #0099ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
-<form action="" method="get" id="outerForm">
-    <div th:replace="tmpl-navbar-top :: top"></div>
+    <header th:include="tmpl-head :: head">
+        <!-- Your header content goes here -->
+    </header>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div th:replace="tmpl-navbar-left :: left"></div>
+            <nav th:replace="tmpl-navbar-left :: left">
+                <!-- Your navigation content goes here -->
+            </nav>
 
-            <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
+            <div class="col-sm-9 col-md-9 main">
 
-                <div th:replace="tmpl-banner :: banner"></div>
+                <div th:replace="tmpl-banner :: banner">
+                    <!-- Your banner content goes here -->
+                </div>
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -23,17 +75,13 @@
                     <div class="panel-body">
                         <p>
                             This server provides a complete implementation of the FHIR Specification
-                            using a 100% open source software stack.
+                            using a 100% open-source software stack.
                         </p>
                         <p>
-                            This server is built
-                            from a number of modules of the
+                            This server is built from a number of modules of the
                             <a href="https://github.com/jamesagnew/hapi-fhir/">HAPI FHIR</a>
-                            project, which is a 100% open-source (Apache 2.0 Licensed) Java based
+                            project, which is a 100% open-source (Apache 2.0 Licensed) Java-based
                             implementation of the FHIR specification.
-                        </p>
-                        <p>
-
                         </p>
                     </div>
                 </div>
@@ -44,8 +92,8 @@
                     <div class="panel-body">
                         <p>
                             This UI can be customized!
-                            You might want to put rules on who can use this server here, or
-                            notices about privacy, or whatever else you want..
+                            You might want to put rules on who can use this server here or
+                            notices about privacy, or whatever else you want.
                         </p>
                     </div>
                 </div>
@@ -54,7 +102,10 @@
         </div>
     </div>
 
-    <div th:replace="tmpl-footer :: footer"></div>
-</form>
+    <footer th:replace="tmpl-footer :: footer">
+        <!-- Your footer content goes here -->
+    </footer>
+
+    <script src="path/to/your/scripts.js"></script>
 </body>
 </html>
