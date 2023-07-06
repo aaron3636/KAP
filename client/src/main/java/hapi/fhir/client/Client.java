@@ -14,11 +14,14 @@ public class Client {
 		/**
 		 * This will get a fake patient data.
 		 */
-		controller.readPatient();
+		// controller.readPatient();
 		/**
 		 * this will create a fake Patient with a CT image in the database
 		 */
-		controller.createNewPatient();
+		for (int i = 0; i < 10; i++) {
+			controller.createNewPatient();
+		}
+		// controller.createNewPatient();
 
 	}
 

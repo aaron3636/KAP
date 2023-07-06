@@ -94,9 +94,9 @@ public class PatientController {
 		newPatient.addName().setFamily(randomName[1]).addGiven(randomName[0]);
 		newPatient.setId(RandomGenerator.generateRandomID());
 		newPatient.setGender(Enumerations.AdministrativeGender.MALE);
-		newPatient.setBirthDateElement(new DateType("2015-11-18"));
+		newPatient.setBirthDateElement(new DateType(RandomGenerator.generateRandomBirthdate()));
 		Attachment attachment = new Attachment();
-		attachment.setContentType("image/png");
+		attachment.setContentType("image/jpeg");
 		try {
 			attachment.setData(ImageTools.getImageData(RandomGenerator.getRandomImage()));
 		} catch (IOException e) {
@@ -105,9 +105,12 @@ public class PatientController {
 		newPatient.addPhoto(attachment);
 		newPatient.addTelecom().setSystem(ContactPoint.ContactPointSystem.PHONE)
 				.setUse(ContactPoint.ContactPointUse.MOBILE).setValue(RandomGenerator.generateRandomPhoneNumber());
+		newPatient.addTelecom().setSystem(ContactPoint.ContactPointSystem.EMAIL)
+				.setValue(RandomGenerator.generateRandomEmail());
 		Address address = new Address();
 		address.setText(RandomGenerator.generateRandomAddress());
 		newPatient.addAddress(address);
+		newPatient.setActive(true);
 		/**
 		 * Using identifiers allows you to represent various identification systems or
 		 * assign multiple identifiers to a resource, which can be useful in
@@ -120,7 +123,8 @@ public class PatientController {
 		 * with the resource. Both fields serve different purposes and provide different
 		 * levels of identification and reference.
 		 **/
-		newPatient.addIdentifier().setSystem("http://acme.org/mrn").setValue(RandomGenerator.generateRandomID());
+		newPatient.addIdentifier().setSystem("http://fhir.de/NamingSystem/gkv/kvid-10")
+				.setValue(RandomGenerator.generateRandomID());
 
 		return newPatient;
 	}
