@@ -1,9 +1,24 @@
-## Running the Server:
-1. Install [Docker](https://www.docker.com/).
-2. From the terminal, run the following command.
-```
-$ docker-compose up
-```
+<<<<<<< HEAD
+<h1 align="center">Klinisches Anwendungsprojekt</h1>
+
+## Description:
+
+
+
+
+
+## Getting started:
+
+
+
+
 
 ## Notes:
-- This installation process may take up to 15 minutes, depending on your network connection. All necessary dependencies will be installed during this time.
+
+
+
+
+## Contact
+=======
+
+>>>>>>> 01f5ee8bbecd3e61c21c21c41e4b017942e727f6
