@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <h1 align="center">Klinisches Anwendungsprojekt</h1>
 
 ## Description:
