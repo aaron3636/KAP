@@ -1,10 +1,12 @@
-# Klinisches Anwendungsprojekt
+# Klinisches Anwendungsprojekt - Server Repository
 
-Welcome to the Klinisches Anwendungsprojekt (Clinical Application Project) repository! This project consists of a server and a client application aimed at facilitating the testing of clinical data resources. The server is based on the Hapi-FHIR open-source project and has been configured with bearer token authentication. The client, named PatientGenerator, generates random patient data and allows users to interact with the server through various HTTP methods.
+Klinisches Anwendungsprojekt - Server Repository
+Welcome to the Klinisches Anwendungsprojekt (Clinical Application Project) server repository! This project comprises a server and a client application designed to streamline the testing of clinical data resources. The server is built upon the open-source Hapi-FHIR project and incorporates bearer token authentication for enhanced security.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Frontend Integration](frontend-integration)
 - [Client - PatientGenerator](#client---patientgenerator)
 - [Server Configuration](#server-configuration)
 - [Getting Started](#getting-started)
@@ -15,6 +17,13 @@ Welcome to the Klinisches Anwendungsprojekt (Clinical Application Project) repos
 ## Introduction
 
 In the context of clinical applications, it is crucial to have a reliable and easy-to-use environment for testing different resources. This project aims to provide a practical solution for testing a server with clinical data resources. The server, based on Hapi-FHIR, offers various RESTful endpoints, and we have added bearer token authentication to enhance security.
+
+## Frontend Integration
+This server repository is designed to seamlessly integrate with the frontend component of the project, available in the repository KAPFrontEnd. Together, these two repositories offer a comprehensive solution for clinical application testing, providing a user-friendly interface to interact with the clinical data resources.
+
+We invite you to explore the KAPFrontEnd repository to leverage the full potential of the Klinisches Anwendungsprojekt. The frontend enhances the overall user experience and complements the functionality of the server.
+
+
 
 ## Client - PatientGenerator
 
